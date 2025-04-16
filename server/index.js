@@ -3,11 +3,12 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
 const useModel = require('./models/schema')
+require('dotenv').config();
 
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/crud')
+mongoose.connect(process.env.MONGODB_URI)
 
 app.get('/',(req,res)=>{
     useModel.find({})
