@@ -12,7 +12,7 @@ const Main = () => {
     },[])
 
     const handledelete =(id)=>{
-      axios.delete('https://crud-function-4.onrender.com'+id)
+      axios.delete("https://crud-function-4.onrender.com/deleteuser/"+id)
       .then((res)=>{console.log(res)
         window.location.reload()
       })
