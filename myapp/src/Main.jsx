@@ -6,13 +6,13 @@ const Main = () => {
     const [users,setUsers]=useState([]);
 
     useEffect(()=>{ 
-      axios.get('http://localhost:5050')
+      axios.get('https://crud-function-4.onrender.com')
       .then((result)=>setUsers(result.data))
       .catch((err)=>console.log(err))
     },[])
 
     const handledelete =(id)=>{
-      axios.delete('http://localhost:5050/deleteuser/'+id)
+      axios.delete('https://crud-function-4.onrender.com'+id)
       .then((res)=>{console.log(res)
         window.location.reload()
       })

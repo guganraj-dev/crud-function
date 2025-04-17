@@ -11,7 +11,7 @@ const Users = () => {
 
   const submit=(e)=>{
     e.preventDefault()
-    axios.post('http://localhost:5050/createUser',{name,email,password,phone})
+    axios.post('https://crud-function-4.onrender.com/createUser',{name,email,password,phone})
     .then((res)=>{
       console.log(res)
       Navigate('/')
