@@ -23,7 +23,7 @@ const Update = () => {
           setphone(result.data.phone)
         })
         .catch((err)=>console.log(err))
-      },[])
+      },[id])
 
       const update =(e)=>{
         e.preventDefault()
